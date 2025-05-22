@@ -18,11 +18,11 @@ const PLAYERS = {
 };
 
 function deriveActivePlayer(gameTurns) {
-  let currentPlayer = "X";
-  if (gameTurns.length > 0 && gameTurns[0].player === "X") {
-    currentPlayer = "O";
+  const isXStartingPlayer = gameTurns.length > 0 && gameTurns[0].player === "X";
+  if (isXStartingPlayer) {
+    return "O";
   }
-  return currentPlayer;
+  return "X";
 }
 
 function deriveWinner(gameBoard, players) {
@@ -87,8 +87,6 @@ function App() {
   }
 
   function handlePlayerNameChange(symbol, newName) {
-    console.log("test");
-
     setPlayers((prevPlayers) => {
       return {
         ...prevPlayers,

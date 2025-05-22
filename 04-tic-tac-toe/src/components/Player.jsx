@@ -20,15 +20,14 @@ export default function Player({
     setPlayerName(event.target.value);
   }
 
-  let editablePlayName = <span className="player-name">{playerName}</span>;
-  let buttonCaption = "Edit";
 
-  if (isEditing) {
-    editablePlayName = (
-      <input type="text" required value={playerName} onChange={handleChange} />
-    );
-    buttonCaption = "Save";
-  }
+  const editablePlayName = isEditing ? (
+    <input type="text" required value={playerName} onChange={handleChange} />
+  ) : (
+    <span className="player-name">{playerName}</span>
+  );
+
+  const buttonCaption = isEditing ? "Save" : "Edit";
 
   return (
     <li className={isActive ? "active" : undefined}>
