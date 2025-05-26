@@ -2,12 +2,12 @@ import InputField from './InputField';
 
 const INPUT_GROUPS = [
   [
-    { label: "Initial Investment", id: "initialInvestment" },
-    { label: "Annual Investment", id: "annualInvestment" }
+    { label: "Initial Investment", fieldName: "initialInvestment" },
+    { label: "Annual Investment", fieldName: "annualInvestment" }
   ],
   [
-    { label: "Expected Return", id: "expectedReturn" },
-    { label: "Duration", id: "duration" }
+    { label: "Expected Return", fieldName: "expectedReturn" },
+    { label: "Duration", fieldName: "duration" }
   ]
 ];
 
@@ -18,10 +18,10 @@ export default function UserInput({onChange, userInput}) {
             <div key={groupIndex} className='input-group'>
                 {fieldGroup.map(field => (
                     <InputField 
-                    key={field.id}
+                    key={field.fieldName}
                     label={field.label}
-                    id={field.id}
-                    value={userInput[field.id]}
+                    fieldName={field.fieldName}
+                    value={userInput[field.fieldName]}
                     onChange={onChange}
                     />
                 ))}

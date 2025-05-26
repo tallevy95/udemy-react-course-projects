@@ -1,12 +1,17 @@
-export default function InputField({ label, id, value, onChange }) {
+import { useId } from "react";
+
+export default function InputField({ label, fieldName, value, onChange }) {
+  const id = useId();
+  const inputId = `${fieldName}-${id}`;
+
   return (
     <p>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={inputId}>{label}</label>
       <input
-        id={id}
+        id={inputId}
         type="number"
         value={value}
-        onChange={(event) => onChange(id, event.target.value)}
+        onChange={(event) => onChange(fieldName, event.target.value)}
         required
       />
     </p>
