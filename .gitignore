@@ -3,6 +3,7 @@
 **/node_modules/
 node_modules/
 **/.gitignore
+**/pnpm-lock.yaml
 
 
 # OS generated files
