@@ -3,7 +3,7 @@ import ResultModal from "./ResultModal";
 
 export default function TimerChallenge({ title, targetTime }) {
   const timer = useRef();
-  const diaglog = useRef();
+  const dialog = useRef();
 
   const [timeRemaining, setTimeRemaining] = useState(targetTime * 1000);
 
@@ -11,7 +11,7 @@ export default function TimerChallenge({ title, targetTime }) {
 
   if (timeRemaining <= 0) {
     clearInterval(timer.current);
-    diaglog.current.open();
+    dialog.current.open();
   }
 
   function handleReset() {
@@ -25,14 +25,14 @@ export default function TimerChallenge({ title, targetTime }) {
   }
 
   function handleStop() {
-    diaglog.current.open();
+    dialog.current.open();
     clearInterval(timer.current);
   }
 
   return (
     <>
       <ResultModal
-        ref={diaglog}
+        ref={dialog}
         targetTime={targetTime}
         remainingTime={timeRemaining}
         onReset={handleReset}
