@@ -35,26 +35,6 @@ npm install
 npm start
 ```
 
-## Projects List
-
-### XX-project-name
-- **Description**: Brief description of the project
-- **Key Concepts**: Main React concepts covered
-- **Features**: List of implemented features
-- **Tech Stack**: Specific technologies used
-- **Status**: 🟢 Completed | 🟡 In Progress | 🔴 Not Started
-
-### 03-react-essentials
-- **Description**: A comprehensive project covering React fundamentals and core concepts
-- **Key Concepts**: Components, Props, State, Events, Conditional Rendering
-- **Features**:
-  - Dynamic component rendering
-  - Interactive tabs system
-  - State management examples
-  - Code snippets showcase
-- **Tech Stack**: React, CSS Modules, Vite
-- **Status**: 🟢 Completed
-
 ## Technologies
 
 - React
